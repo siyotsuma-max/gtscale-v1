@@ -607,15 +607,17 @@
             gap: 6px;
         }
         .modal ul li {
-            font-size: 0.88rem;
+            font-size: 1rem;
             color: #444;
-            line-height: 1.5;
-            padding-left: 1em;
-            text-indent: -1em;
+            line-height: 1.7;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f2f5;
         }
-        .modal ul li::before {
-            content: '▸ ';
-            color: #2176ae;
+        .modal ul li:last-child { border-bottom: none; }
+        .modal ul li strong {
+            display: block;
+            color: #1a1a2e;
+            margin-bottom: 2px;
         }
 
         /* ====== Print styles ====== */
@@ -710,31 +712,35 @@
     <div class="modal-overlay" id="helpModal">
         <div class="modal">
             <div class="modal-header">
-                <h2>📖 使い方ガイド</h2>
+                <h2>💡 これ、知ってましたか？</h2>
                 <button class="modal-close" id="helpClose">✕</button>
             </div>
 
-            <h3>自動モード</h3>
             <ul>
-                <li>ルート音とスケールを選ぶと、フレットボード上に音が自動表示される</li>
-                <li>♭ボタンでルート音をフラット表記（D♭、E♭など）に切り替え</li>
-                <li>英語 / ドレミ / 度数で音名表記を変更できる</li>
-            </ul>
-
-            <h3>フリーモード</h3>
-            <ul>
-                <li>フレットをタップしてドットを置く・もう一度タップで消す</li>
-                <li>スケールと範囲を指定して「読み込む」で自動配置できる</li>
-                <li>ドット色は5色から選択可能（複数のスケールを重ねて比較できる）</li>
-                <li>「再生」でルート音から順番にスケールの音が鳴る</li>
-                <li>「全消去」でフレットボードをリセット</li>
-                <li>メモ欄のテキストは印刷時にも表示される</li>
-            </ul>
-
-            <h3>共通</h3>
-            <ul>
-                <li>「フル / 縮小版」でフレット表示数を切り替え（スマホでは縮小版推奨）</li>
-                <li>「印刷 / PDF保存」で横向きレイアウトで印刷・PDF化できる</li>
+                <li>
+                    <strong>🎸 キーを♭で表示できます</strong><br>
+                    「♭」ボタンを押すと、C# が D♭、F# が G♭ など、フラット表記に切り替わります。
+                </li>
+                <li>
+                    <strong>🎵 自動でポジションを表示できます</strong>（フリーモード）<br>
+                    スケールとフレット範囲を選んで「読み込む」を押すだけ。手でドットを置かなくても一瞬で表示できます。
+                </li>
+                <li>
+                    <strong>📍 特定のポジションだけ表示できます</strong>（フリーモード）<br>
+                    フレット範囲を「5〜9」などと指定して「読み込む」を押すと、そのポジションのみが表示されます。ハイポジションの練習に便利です。
+                </li>
+                <li>
+                    <strong>🔊 スケールの音を実際に鳴らせます</strong>（フリーモード）<br>
+                    「再生」ボタンを押すと、ルート音から順番に音が流れます。響きを耳で確認できます。
+                </li>
+                <li>
+                    <strong>🖨️ そのまま印刷して生徒に渡せます</strong><br>
+                    「印刷 / PDF保存」ボタンで、画面の状態をそのままプリントできます。メモ欄に書いた内容も印刷されます。
+                </li>
+                <li>
+                    <strong>📱 スマホで見るときは「縮小版」が便利です</strong><br>
+                    ヘッダーの「縮小版」ボタンで12フレット表示になり、スマホ画面にきれいに収まります。
+                </li>
             </ul>
         </div>
     </div>
